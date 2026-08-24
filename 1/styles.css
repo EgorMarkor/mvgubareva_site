@@ -12,8 +12,8 @@
   --line: rgba(96, 68, 82, 0.17);
   --shadow-color: rgba(64, 41, 37, 0.12);
   --radius: 8px;
-  --heading: 'Manrope', Arial, sans-serif;
-  --body: 'PT Sans', Arial, sans-serif;
+  --heading: 'Bitter', Georgia, serif;
+  --body: 'Bitter', Georgia, serif;
 }
 
 * { box-sizing: border-box; }
@@ -130,7 +130,11 @@ h1, h2, h3 {
   line-height: 1.04;
   letter-spacing: 0;
 }
-h1 { max-width: 820px; font-size: clamp(42px, 6vw, 74px); }
+h1 {
+  max-width: 820px;
+  font-size: clamp(38px, 4.4vw, 52px);
+  line-height: 1.1;
+}
 h2 { font-size: clamp(31px, 4.1vw, 52px); }
 h3 { font-size: 21px; line-height: 1.22; }
 .lead, .section-heading p, .about-copy p, .contacts p {
@@ -641,8 +645,8 @@ h3 { font-size: 21px; line-height: 1.22; }
   .eyebrow { margin-bottom: 10px; font-size: 11px; }
   h1 {
     max-width: 100%;
-    font-size: clamp(32px, 10.2vw, 39px);
-    line-height: 1.08;
+    font-size: clamp(30px, 8.8vw, 36px);
+    line-height: 1.12;
   }
   h2 { font-size: clamp(28px, 8.5vw, 34px); line-height: 1.1; }
   h3 { font-size: 20px; }
