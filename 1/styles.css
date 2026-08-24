@@ -347,6 +347,44 @@ h3 { font-size: 21px; line-height: 1.22; }
 .mini-courses { padding-top: 24px; }
 .mini-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .mini-grid strong { display: inline-block; margin-top: 16px; color: var(--primary-deep); }
+
+.individual-section { padding-block: 56px; }
+.individual-offer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+  align-items: center;
+  gap: 48px;
+  padding-block: 36px;
+  border-block: 1px solid var(--line);
+}
+.individual-copy { max-width: 720px; }
+.individual-copy > p:last-child {
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+.individual-price {
+  display: grid;
+  gap: 14px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--panel) 88%, transparent);
+  box-shadow: 0 18px 45px var(--shadow-color);
+}
+.individual-price span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.individual-price strong {
+  color: var(--primary-deep);
+  font-family: var(--heading);
+  font-size: 48px;
+  line-height: 1;
+}
 .contacts-grid { grid-template-columns: minmax(0, 1fr) minmax(300px, 420px); }
 .contact-card { display: grid; gap: 12px; padding: 20px; }
 .contact-link {
@@ -483,6 +521,8 @@ h3 { font-size: 21px; line-height: 1.22; }
   .nav.is-open { display: grid; }
   .nav a { padding: 14px 16px; }
   .hero-grid, .results-layout, .about-grid, .education-layout, .contacts-grid { grid-template-columns: 1fr; }
+  .individual-offer { grid-template-columns: 1fr; }
+  .individual-price { width: min(100%, 420px); }
   .hero { min-height: auto; }
   .hero-copy { order: 2; }
   .hero-visual { order: 1; max-width: 540px; margin: 0 auto; }
@@ -588,6 +628,11 @@ h3 { font-size: 21px; line-height: 1.22; }
   .results-layout,
   .about-grid,
   .education-layout,
+  .individual-section { padding-block: 36px; }
+  .individual-offer { gap: 24px; padding-block: 24px; }
+  .individual-copy > p:last-child { margin-top: 14px; font-size: 16px; line-height: 1.58; }
+  .individual-price { width: 100%; padding: 20px; }
+  .individual-price strong { font-size: 38px; }
   .contacts-grid { gap: 28px; }
   .scoreboard { padding: 12px; }
   .score-row { grid-template-columns: 1fr; padding: 16px; }
