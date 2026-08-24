@@ -1,8 +1,6 @@
 # Lesson materials
 
-This folder is reserved for real lesson-material screenshots.
-
-Suggested names if replacing the CSS previews with images:
+This folder contains the original lesson-material images attached by the site owner:
 
 - `material-01.jpg` - solved trigonometry example
 - `material-02.jpg` - second solved trigonometry example

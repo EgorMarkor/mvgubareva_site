@@ -515,91 +515,38 @@ h3 { font-size: 21px; line-height: 1.22; }
   outline-offset: 3px;
 }
 .lesson-materials { padding-top: 30px; }
-.materials-layout {
-  display: grid;
-  grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
-  align-items: start;
-  gap: 44px;
+.materials-layout .section-heading {
+  max-width: 760px;
+  margin-bottom: 32px;
 }
 .materials-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  columns: 3 300px;
+  column-gap: 16px;
 }
-.material-card {
-  min-width: 0;
-  padding: 16px;
+.material-photo {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 16px;
+  break-inside: avoid;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: color-mix(in srgb, var(--panel) 88%, transparent);
+  background: var(--panel);
   box-shadow: 0 18px 45px var(--shadow-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.material-card h3 { margin-top: 16px; font-size: 20px; }
-.material-card p { margin: 9px 0 0; color: var(--muted); line-height: 1.55; }
-.material-preview {
-  position: relative;
-  overflow: hidden;
-  min-height: 190px;
-  padding: 18px;
-  border: 1px solid color-mix(in srgb, var(--primary) 18%, transparent);
-  border-radius: var(--radius);
-  background:
-    linear-gradient(color-mix(in srgb, var(--primary) 8%, transparent) 1px, transparent 1px),
-    linear-gradient(90deg, color-mix(in srgb, var(--primary) 8%, transparent) 1px, transparent 1px),
-    color-mix(in srgb, var(--panel) 84%, white);
-  background-size: 22px 22px;
-}
-.material-preview::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto;
-  height: 54px;
-  background: linear-gradient(90deg, color-mix(in srgb, var(--primary) 17%, transparent), color-mix(in srgb, var(--accent) 13%, transparent));
-}
-.material-preview span,
-.material-preview strong,
-.material-preview em,
-.material-preview i { position: relative; z-index: 1; }
-.material-preview span {
-  display: inline-flex;
-  min-height: 30px;
-  align-items: center;
-  padding: 6px 10px;
-  border-radius: var(--radius);
-  color: var(--primary-deep);
-  font-size: 12px;
-  font-weight: 800;
-  background: color-mix(in srgb, var(--panel) 72%, white);
-}
-.material-preview strong {
+.material-photo img {
   display: block;
-  max-width: 100%;
-  margin-top: 20px;
-  color: var(--primary-deep);
-  font-family: var(--heading);
-  font-size: clamp(24px, 3vw, 34px);
-  line-height: 1.08;
+  width: 100%;
+  height: auto;
 }
-.material-preview em { display: block; margin-top: 8px; color: var(--accent); font-style: normal; font-weight: 800; }
-.material-preview i { display: block; width: 72%; height: 2px; margin-top: 16px; background: color-mix(in srgb, var(--primary) 34%, transparent); }
-.material-preview i:nth-of-type(2) { width: 54%; }
-.material-preview i:nth-of-type(3) { width: 82%; }
-.material-solution .material-preview::after,
-.material-worksheet .material-preview::after,
-.material-formulas .material-preview::after,
-.material-notes .material-preview::after {
-  position: absolute;
-  right: 16px;
-  bottom: 12px;
-  color: color-mix(in srgb, var(--primary) 68%, transparent);
-  font-family: var(--heading);
-  font-size: 42px;
-  font-weight: 800;
+.material-photo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 54px var(--shadow-color);
 }
-.material-solution .material-preview::after { content: "α"; }
-.material-worksheet .material-preview::after { content: "12"; }
-.material-formulas .material-preview::after { content: "log"; font-size: 34px; }
-.material-notes .material-preview::after { content: "✓"; }
+.material-photo:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
 
 @media (max-width: 980px) {
   .nav-toggle { display: inline-grid; width: 44px; height: 44px; place-items: center; border: 0; border-radius: var(--radius); background: var(--primary-deep); cursor: pointer; }
@@ -711,10 +658,9 @@ h3 { font-size: 21px; line-height: 1.22; }
   .program-card,
   .mini-grid article { padding: 20px; }
   .lesson-materials { padding-top: 18px; }
-  .materials-layout { gap: 24px; }
-  .material-card { padding: 12px; }
-  .material-preview { min-height: 170px; padding: 14px; }
-  .material-card h3 { font-size: 19px; }
+  .materials-layout .section-heading { margin-bottom: 24px; }
+  .materials-gallery { columns: 1; }
+  .material-photo { margin-bottom: 12px; }
   .program-card { min-height: auto; }
   .program-top { margin-bottom: 20px; }
   .program-top strong { font-size: 34px; }
