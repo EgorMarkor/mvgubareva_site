@@ -70,3 +70,67 @@ if (educationCarousel) {
 
   updateCarousel(0);
 }
+
+
+const reviewsCarousel = document.querySelector("[data-reviews-carousel]");
+
+if (reviewsCarousel) {
+  const reviewsTrack = reviewsCarousel.querySelector("[data-reviews-track]");
+  const reviewSlides = Array.from(reviewsCarousel.querySelectorAll(".review-slide"));
+  const reviewsPrev = reviewsCarousel.querySelector("[data-reviews-prev]");
+  const reviewsNext = reviewsCarousel.querySelector("[data-reviews-next]");
+  const reviewsCount = reviewsCarousel.querySelector("[data-reviews-count]");
+  const reviewDialog = document.querySelector("[data-review-dialog]");
+  const reviewDialogImage = reviewDialog.querySelector("[data-review-dialog-image]");
+  const reviewDialogClose = reviewDialog.querySelector("[data-review-dialog-close]");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let activeReview = 0;
+
+  const updateReviews = (index) => {
+    activeReview = Math.max(0, Math.min(index, reviewSlides.length - 1));
+    reviewsCount.textContent = `${activeReview + 1} / ${reviewSlides.length}`;
+    reviewsPrev.disabled = activeReview === 0;
+    reviewsNext.disabled = activeReview === reviewSlides.length - 1;
+  };
+
+  const showReview = (index) => {
+    const target = reviewSlides[Math.max(0, Math.min(index, reviewSlides.length - 1))];
+    target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "nearest", inline: "start" });
+  };
+
+  reviewsPrev.addEventListener("click", () => showReview(activeReview - 1));
+  reviewsNext.addEventListener("click", () => showReview(activeReview + 1));
+
+  reviewsTrack.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      showReview(activeReview + (event.key === "ArrowRight" ? 1 : -1));
+    }
+  });
+
+  reviewsTrack.addEventListener("scroll", () => {
+    const trackLeft = reviewsTrack.getBoundingClientRect().left;
+    const closest = reviewSlides.reduce((best, slide, index) => {
+      const distance = Math.abs(slide.getBoundingClientRect().left - trackLeft);
+      return distance < best.distance ? { index, distance } : best;
+    }, { index: 0, distance: Infinity });
+    updateReviews(closest.index);
+  }, { passive: true });
+
+  reviewSlides.forEach((slide) => {
+    const zoomButton = slide.querySelector(".review-zoom");
+    const sourceImage = slide.querySelector("img");
+    zoomButton.addEventListener("click", () => {
+      reviewDialogImage.src = sourceImage.currentSrc || sourceImage.src;
+      reviewDialogImage.alt = sourceImage.alt;
+      reviewDialog.showModal();
+    });
+  });
+
+  reviewDialogClose.addEventListener("click", () => reviewDialog.close());
+  reviewDialog.addEventListener("click", (event) => {
+    if (event.target === reviewDialog) reviewDialog.close();
+  });
+
+  updateReviews(0);
+}
