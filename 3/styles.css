@@ -519,33 +519,63 @@ h3 { font-size: 21px; line-height: 1.22; }
   max-width: 760px;
   margin-bottom: 32px;
 }
-.materials-gallery {
-  columns: 3 300px;
-  column-gap: 16px;
+.materials-carousel {
+  width: min(100%, 920px);
+  margin-inline: auto;
 }
-.material-photo {
-  display: block;
-  overflow: hidden;
+.materials-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
   margin-bottom: 16px;
-  break-inside: avoid;
+}
+.materials-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.materials-track::-webkit-scrollbar { display: none; }
+.materials-track:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 28%, transparent);
+  outline-offset: 4px;
+}
+.material-slide {
+  display: grid;
+  flex: 0 0 100%;
+  width: 100%;
+  height: clamp(360px, 62vw, 640px);
+  min-width: 0;
+  place-items: center;
+  padding: 16px;
+  overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--panel);
   box-shadow: 0 18px 45px var(--shadow-color);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
-.material-photo img {
+.material-slide img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
 }
-.material-photo:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 22px 54px var(--shadow-color);
-}
-.material-photo:focus-visible {
+.material-slide:focus-visible {
   outline: 3px solid var(--accent);
-  outline-offset: 4px;
+  outline-offset: -6px;
+}
+.materials-carousel .carousel-dots {
+  justify-content: center;
+  margin-top: 16px;
+}
+.materials-carousel .carousel-button:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+  transform: none;
 }
 
 @media (max-width: 980px) {
@@ -649,7 +679,6 @@ h3 { font-size: 21px; line-height: 1.22; }
   .proof-panel strong { font-size: 18px; }
   .strip-grid,
   .programs-grid,
-  .materials-gallery,
   .mini-grid {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -659,8 +688,8 @@ h3 { font-size: 21px; line-height: 1.22; }
   .mini-grid article { padding: 20px; }
   .lesson-materials { padding-top: 18px; }
   .materials-layout .section-heading { margin-bottom: 24px; }
-  .materials-gallery { columns: 1; }
-  .material-photo { margin-bottom: 12px; }
+  .materials-controls { justify-content: space-between; margin-bottom: 12px; }
+  .material-slide { height: 360px; padding: 8px; }
   .program-card { min-height: auto; }
   .program-top { margin-bottom: 20px; }
   .program-top strong { font-size: 34px; }

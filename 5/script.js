@@ -72,6 +72,71 @@ if (educationCarousel) {
 }
 
 
+const materialsCarousel = document.querySelector("[data-materials-carousel]");
+
+if (materialsCarousel) {
+  const materialsTrack = materialsCarousel.querySelector("[data-materials-track]");
+  const materialSlides = Array.from(materialsCarousel.querySelectorAll(".material-slide"));
+  const materialsPrev = materialsCarousel.querySelector("[data-materials-prev]");
+  const materialsNext = materialsCarousel.querySelector("[data-materials-next]");
+  const materialsCount = materialsCarousel.querySelector("[data-materials-count]");
+  const materialsDots = materialsCarousel.querySelector("[data-materials-dots]");
+  const reduceMaterialsMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let activeMaterial = 0;
+
+  const updateMaterials = (index) => {
+    activeMaterial = Math.max(0, Math.min(index, materialSlides.length - 1));
+    materialsCount.textContent = `${activeMaterial + 1} / ${materialSlides.length}`;
+    materialsPrev.disabled = activeMaterial === 0;
+    materialsNext.disabled = activeMaterial === materialSlides.length - 1;
+    materialsDots.querySelectorAll(".carousel-dot").forEach((dot, dotIndex) => {
+      dot.classList.toggle("is-active", dotIndex === activeMaterial);
+      dot.setAttribute("aria-current", dotIndex === activeMaterial ? "true" : "false");
+    });
+  };
+
+  const showMaterial = (index) => {
+    const target = materialSlides[Math.max(0, Math.min(index, materialSlides.length - 1))];
+    target.scrollIntoView({
+      behavior: reduceMaterialsMotion ? "auto" : "smooth",
+      block: "nearest",
+      inline: "start"
+    });
+  };
+
+  materialSlides.forEach((slide, index) => {
+    const dot = document.createElement("button");
+    dot.className = "carousel-dot";
+    dot.type = "button";
+    dot.setAttribute("aria-label", `Показать материал ${index + 1}`);
+    dot.addEventListener("click", () => showMaterial(index));
+    materialsDots.append(dot);
+  });
+
+  materialsPrev.addEventListener("click", () => showMaterial(activeMaterial - 1));
+  materialsNext.addEventListener("click", () => showMaterial(activeMaterial + 1));
+
+  materialsTrack.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      showMaterial(activeMaterial + (event.key === "ArrowRight" ? 1 : -1));
+    }
+  });
+
+  materialsTrack.addEventListener("scroll", () => {
+    const trackLeft = materialsTrack.getBoundingClientRect().left;
+    const closest = materialSlides.reduce((best, slide, index) => {
+      const distance = Math.abs(slide.getBoundingClientRect().left - trackLeft);
+      return distance < best.distance ? { index, distance } : best;
+    }, { index: 0, distance: Infinity });
+    updateMaterials(closest.index);
+  }, { passive: true });
+
+  updateMaterials(0);
+}
+
+
+
 const reviewsCarousel = document.querySelector("[data-reviews-carousel]");
 
 if (reviewsCarousel) {
