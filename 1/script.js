@@ -71,6 +71,77 @@ if (educationCarousel) {
   updateCarousel(0);
 }
 
+const programsCarousel = document.querySelector("[data-programs-carousel]");
+
+if (programsCarousel) {
+  const programsTrack = programsCarousel.querySelector("[data-programs-track]");
+  const programSlides = Array.from(programsCarousel.querySelectorAll(".program-card"));
+  const programsPrev = programsCarousel.querySelector("[data-programs-prev]");
+  const programsNext = programsCarousel.querySelector("[data-programs-next]");
+  const programsCount = programsCarousel.querySelector("[data-programs-count]");
+  const programsDots = programsCarousel.querySelector("[data-programs-dots]");
+  const reduceProgramsMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let activeProgram = 0;
+
+  const updatePrograms = (index) => {
+    activeProgram = Math.max(0, Math.min(index, programSlides.length - 1));
+    programsCount.textContent = `${activeProgram + 1} / ${programSlides.length}`;
+    programsPrev.disabled = activeProgram === 0;
+    programsNext.disabled = activeProgram === programSlides.length - 1;
+
+    programSlides.forEach((slide, slideIndex) => {
+      if (slideIndex !== activeProgram) {
+        const details = slide.querySelector(".program-details");
+        if (details) details.open = false;
+      }
+    });
+
+    programsDots.querySelectorAll(".carousel-dot").forEach((dot, dotIndex) => {
+      dot.classList.toggle("is-active", dotIndex === activeProgram);
+      dot.setAttribute("aria-current", dotIndex === activeProgram ? "true" : "false");
+    });
+  };
+
+  const showProgram = (index) => {
+    const target = programSlides[Math.max(0, Math.min(index, programSlides.length - 1))];
+    target.scrollIntoView({
+      behavior: reduceProgramsMotion ? "auto" : "smooth",
+      block: "nearest",
+      inline: "start"
+    });
+  };
+
+  programSlides.forEach((slide, index) => {
+    const dot = document.createElement("button");
+    dot.className = "carousel-dot";
+    dot.type = "button";
+    dot.setAttribute("aria-label", `Показать курс ${index + 1}`);
+    dot.addEventListener("click", () => showProgram(index));
+    programsDots.append(dot);
+  });
+
+  programsPrev.addEventListener("click", () => showProgram(activeProgram - 1));
+  programsNext.addEventListener("click", () => showProgram(activeProgram + 1));
+
+  programsTrack.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      showProgram(activeProgram + (event.key === "ArrowRight" ? 1 : -1));
+    }
+  });
+
+  programsTrack.addEventListener("scroll", () => {
+    const trackLeft = programsTrack.getBoundingClientRect().left;
+    const closest = programSlides.reduce((best, slide, index) => {
+      const distance = Math.abs(slide.getBoundingClientRect().left - trackLeft);
+      return distance < best.distance ? { index, distance } : best;
+    }, { index: 0, distance: Infinity });
+    updatePrograms(closest.index);
+  }, { passive: true });
+
+  updatePrograms(0);
+}
+
 
 const materialsCarousel = document.querySelector("[data-materials-carousel]");
 

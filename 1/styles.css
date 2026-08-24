@@ -211,7 +211,7 @@ h3 { font-size: 21px; line-height: 1.22; }
 }
 .proof-panel span { color: var(--accent); font-size: 12px; font-weight: 800; text-transform: uppercase; }
 .proof-panel strong { margin-top: 6px; font-size: 22px; line-height: 1.12; }
-.strip-grid, .programs-grid, .mini-grid, .cases-grid { display: grid; gap: 16px; }
+.strip-grid, .mini-grid, .cases-grid { display: grid; gap: 16px; }
 .strip-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .strip-grid > div, .program-card, .scoreboard, .mini-grid article, .contact-card { border-radius: var(--radius); }
 .strip-grid > div, .mini-grid article { padding: 26px; }
@@ -231,11 +231,39 @@ h3 { font-size: 21px; line-height: 1.22; }
 .strip-grid p, .program-card p, .program-card li, .mini-grid p, .score-row span { color: var(--muted); line-height: 1.58; }
 .section-heading { max-width: 780px; margin-bottom: 34px; text-align: center; }
 .section-heading.left { margin: 0; text-align: left; }
-.programs-grid {
-  grid-template-columns: 1fr;
-  max-width: 980px;
+.programs-carousel { width: min(100%, 980px); margin-inline: auto; }
+.programs-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 16px;
 }
-.program-card { position: relative; overflow: hidden; min-height: 0; padding: 26px; }
+.programs-grid {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.programs-grid::-webkit-scrollbar { display: none; }
+.programs-grid:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 28%, transparent);
+  outline-offset: 4px;
+}
+.program-card {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  align-self: flex-start;
+  overflow: hidden;
+  padding: 26px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+.programs-carousel .carousel-dots { justify-content: center; margin-top: 16px; }
 .program-card::before { content: ""; position: absolute; inset: 0 0 auto; height: 7px; background: var(--card-accent); }
 .program-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
 .program-top span { padding: 8px 12px; border-radius: var(--radius); color: white; font-size: 12px; font-weight: 800; background: var(--card-accent); }
@@ -747,11 +775,12 @@ h3 { font-size: 21px; line-height: 1.22; }
   }
   .proof-panel strong { font-size: 18px; }
   .strip-grid,
-  .programs-grid,
   .mini-grid {
     grid-template-columns: 1fr;
     gap: 12px;
   }
+  .programs-grid { gap: 12px; }
+  .programs-controls { justify-content: space-between; margin-bottom: 12px; }
   .strip-grid > div,
   .program-card,
   .mini-grid article { padding: 20px; }

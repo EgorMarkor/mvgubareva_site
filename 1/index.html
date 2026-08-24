@@ -49,7 +49,13 @@
       <h2>Курсы под конкретную учебную цель</h2>
       <p>Выберите нужный результат: уверенная сдача ОГЭ, подготовка к профильному ЕГЭ или точечная работа над сложной темой. Полная программа каждого курса раскрывается по нажатию.</p>
     </div>
-    <div class="container programs-grid">
+    <div class="container programs-carousel" data-programs-carousel aria-label="Карусель курсов">
+      <div class="programs-controls" aria-label="Управление каруселью курсов">
+        <button class="carousel-button" type="button" aria-label="Предыдущий курс" data-programs-prev><span aria-hidden="true">&larr;</span></button>
+        <span class="carousel-count" data-programs-count aria-live="polite">1 / 7</span>
+        <button class="carousel-button" type="button" aria-label="Следующий курс" data-programs-next><span aria-hidden="true">&rarr;</span></button>
+      </div>
+      <div class="programs-grid" data-programs-track tabindex="0">
       <article class="program-card accent-primary">
         <div class="program-top"><span>ЕГЭ</span><strong>65+</strong></div>
         <h3>Уверенная первая часть</h3>
@@ -311,6 +317,8 @@
           </div>
         </details>
       </article>
+      </div>
+      <div class="carousel-dots" data-programs-dots aria-label="Выбор курса"></div>
     </div>
   </section>
 
