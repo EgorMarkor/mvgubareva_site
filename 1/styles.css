@@ -1,16 +1,16 @@
 :root {
-  --bg: #f5fbff;
-  --panel: #ffffff;
-  --panel-alt: #e8f6ff;
-  --ink: #0b1f33;
-  --muted: #516174;
-  --primary: #0ea5e9;
-  --primary-deep: #075985;
-  --accent: #f97316;
-  --second: #0f766e;
-  --gold: #c78b22;
-  --line: rgba(14, 116, 144, 0.16);
-  --shadow-color: rgba(8, 47, 73, 0.12);
+  --bg: #f8eee9;
+  --panel: #fffdfb;
+  --panel-alt: #f1e2e4;
+  --ink: #402925;
+  --muted: #6f555b;
+  --primary: #8e7082;
+  --primary-deep: #5d4253;
+  --accent: #9e5d46;
+  --second: #7b6175;
+  --gold: #a47a5e;
+  --line: rgba(96, 68, 82, 0.17);
+  --shadow-color: rgba(64, 41, 37, 0.12);
   --radius: 8px;
   --heading: 'Manrope', Arial, sans-serif;
   --body: 'PT Sans', Arial, sans-serif;
