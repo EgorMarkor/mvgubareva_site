@@ -60,7 +60,6 @@
     ".about-copy",
     ".education-carousel",
     ".cases-grid figure",
-    ".review-slide",
     ".contacts-grid > *"
   ].join(","), { autoAlpha: 0, willChange: "transform, opacity" });
 
@@ -168,8 +167,6 @@
   revealGroup(".materials-carousel", { children: ".material-slide", y: 54, x: (index) => index % 2 ? 42 : -42, rotation: (index) => index % 2 ? -2.5 : 2.5, stagger: { each: 0.075, from: "center" } });
   revealGroup(".mini-grid", { children: ":scope > article", y: 38, x: 0, rotation: (index) => (index - 1) * 1.4, stagger: { each: 0.08, from: "edges" } });
   revealGroup(".cases-grid", { children: ":scope > figure", y: 58, x: (index) => (index - 1.5) * 22, rotation: (index) => (index - 1.5) * 2.2, stagger: { each: 0.1, from: "start" } });
-  revealGroup(".reviews-track", { children: ".review-slide", y: 34, x: 36, rotation: -1.4, stagger: { each: 0.06, from: "start" } });
-
   select(".scoreboard").forEach((scoreboard) => {
     const rows = select(".score-row", scoreboard);
     gsap.fromTo(rows, {

@@ -231,7 +231,7 @@ if (reviewsCarousel) {
 
   const showReview = (index) => {
     const target = reviewSlides[Math.max(0, Math.min(index, reviewSlides.length - 1))];
-    target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "nearest", inline: "start" });
+    target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "nearest", inline: "center" });
   };
 
   reviewsPrev.addEventListener("click", () => showReview(activeReview - 1));
@@ -245,9 +245,11 @@ if (reviewsCarousel) {
   });
 
   reviewsTrack.addEventListener("scroll", () => {
-    const trackLeft = reviewsTrack.getBoundingClientRect().left;
+    const trackRect = reviewsTrack.getBoundingClientRect();
+    const trackCenter = trackRect.left + trackRect.width / 2;
     const closest = reviewSlides.reduce((best, slide, index) => {
-      const distance = Math.abs(slide.getBoundingClientRect().left - trackLeft);
+      const slideRect = slide.getBoundingClientRect();
+      const distance = Math.abs(slideRect.left + slideRect.width / 2 - trackCenter);
       return distance < best.distance ? { index, distance } : best;
     }, { index: 0, distance: Infinity });
     updateReviews(closest.index);
