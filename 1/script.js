@@ -257,7 +257,7 @@ if (reviewsCarousel) {
     const zoomButton = slide.querySelector(".review-zoom");
     const sourceImage = slide.querySelector("img");
     zoomButton.addEventListener("click", () => {
-      reviewDialogImage.src = sourceImage.currentSrc || sourceImage.src;
+      reviewDialogImage.src = sourceImage.dataset.fullSrc || sourceImage.currentSrc || sourceImage.src;
       reviewDialogImage.alt = sourceImage.alt;
       reviewDialog.showModal();
     });
