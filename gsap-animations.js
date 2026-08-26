@@ -61,7 +61,6 @@
     ".education-carousel",
     ".cases-grid figure",
     ".review-slide",
-    ".individual-offer",
     ".contacts-grid > *"
   ].join(","), { autoAlpha: 0, willChange: "transform, opacity" });
 
