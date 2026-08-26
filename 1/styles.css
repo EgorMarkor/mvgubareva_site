@@ -196,7 +196,10 @@ h3 { font-size: 21px; line-height: 1.22; }
   box-shadow: 0 22px 54px var(--shadow-color);
   object-fit: cover;
 }
-.hero-visual img { aspect-ratio: 0.78; }
+.hero-visual img {
+  aspect-ratio: 0.78;
+  object-position: center top;
+}
 .proof-panel {
   position: absolute;
   right: -18px;
