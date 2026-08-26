@@ -3,50 +3,489 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>10 вариантов дизайна | Мария Губарева</title>
-    <meta name="description" content="Галерея из 10 дизайн-вариантов сайта репетитора по математике." />
+    <meta name="theme-color" content="#f8eee9" />
+    <title>Губарева Мария Валентиновна | Репетитор по математике | Вариант 1</title>
+    <meta name="description" content="Подготовка к ЕГЭ и ОГЭ по математике онлайн: мини-группы, индивидуальный подход, диагностика, пробники и поддержка в чате." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
-    <style>
-      :root { --bg: #f5fbff; --ink: #0b1f33; --muted: #516174; --primary: #075985; --accent: #f97316; --line: rgba(14, 116, 144, 0.16); }
-      * { box-sizing: border-box; }
-      body { margin: 0; min-height: 100vh; color: var(--ink); font-family: "PT Sans", Arial, sans-serif; background: linear-gradient(180deg, #e8f6ff, var(--bg)); }
-      main { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 72px 0; }
-      h1 { max-width: 860px; margin: 0; font-family: "Manrope", Arial, sans-serif; font-size: clamp(42px, 6vw, 76px); line-height: 1.04; letter-spacing: 0; }
-      p { max-width: 720px; color: var(--muted); font-size: 18px; line-height: 1.65; }
-      .grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin-top: 34px; }
-      .variant-card { min-height: 168px; padding: 18px; border: 1px solid var(--line); border-radius: 10px; color: inherit; text-decoration: none; background: rgba(255,255,255,.82); box-shadow: 0 16px 38px rgba(8,47,73,.1); transition: transform .2s ease, border-color .2s ease; }
-      .variant-card:hover, .variant-card:focus-visible { transform: translateY(-2px); border-color: rgba(249,115,22,.45); outline: 3px solid rgba(249,115,22,.22); outline-offset: 2px; }
-      span, small { display: block; }
-      span { color: var(--accent); font-weight: 800; font-size: 12px; text-transform: uppercase; }
-      strong { display: block; margin-top: 16px; font-family: "Manrope", Arial, sans-serif; font-size: 22px; line-height: 1.12; }
-      small { margin-top: 10px; color: var(--muted); font-size: 14px; line-height: 1.35; }
-      @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-      @media (max-width: 560px) {
-        main { width: min(100% - 28px, 1120px); padding: 42px 0; }
-        h1 { font-size: clamp(34px, 11vw, 42px); line-height: 1.08; }
-        p { font-size: 16px; line-height: 1.55; }
-        .grid { grid-template-columns: 1fr; gap: 10px; margin-top: 24px; }
-        .variant-card { min-height: 128px; padding: 16px; }
-        strong { margin-top: 12px; font-size: 20px; }
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main>
-      <h1>10 вариантов дизайна сайта</h1>
-      <p>Каждая папка содержит отдельную версию лендинга вокруг оффера: системная подготовка к профильному ЕГЭ в мини-группах по реальному уровню ученика. В основе контента: диагностика, план, практика, работа над ошибками и отслеживаемый результат.</p>
-      <div class="grid"><a class="variant-card" href="./1/"><span>Вариант 1</span><strong>Swiss Sky</strong><small>Чистая системная подача</small></a>
-<a class="variant-card" href="./2/"><span>Вариант 2</span><strong>Academic Editorial</strong><small>Премиальная академическая строгость</small></a>
-<a class="variant-card" href="./3/"><span>Вариант 3</span><strong>Data Mentor</strong><small>Рациональный интерфейс с ощущением прогресса</small></a>
-<a class="variant-card" href="./4/"><span>Вариант 4</span><strong>Calm Literature</strong><small>Спокойная читабельная экспертность</small></a>
-<a class="variant-card" href="./5/"><span>Вариант 5</span><strong>Bright Workshop</strong><small>Дружелюбная подготовка без детскости</small></a>
-<a class="variant-card" href="./6/"><span>Вариант 6</span><strong>Exam Lab</strong><small>Современный интенсив для старшеклассников</small></a>
-<a class="variant-card" href="./7/"><span>Вариант 7</span><strong>Classic Mentor</strong><small>Традиционная надежность преподавателя</small></a>
-<a class="variant-card" href="./8/"><span>Вариант 8</span><strong>Clear Progress</strong><small>Доступная, очень читаемая система</small></a>
-<a class="variant-card" href="./9/"><span>Вариант 9</span><strong>Formal Proof</strong><small>Строгое оформление для сильных результатов</small></a>
-<a class="variant-card" href="./10/"><span>Вариант 10</span><strong>Warm Academy</strong><small>Живая гуманитарная теплота для сложной математики</small></a></div>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="На главную"><span class="brand-mark">M</span><span><strong>Мария Губарева</strong><small>Lavender Study</small></span></a>
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" data-menu-toggle><span></span><span></span></button>
+      <nav class="nav" data-nav><a href="#programs">Курсы</a><a href="#materials">Материалы</a><a href="#results">Результаты</a><a href="#about">Обо мне</a><a href="#education">Образование</a><a href="#cases">Кейсы</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></nav>
+    </header>
+    <main id="top">
+
+  <section class="hero section-band hero-split">
+    <div class="hero-grid container">
+      <div class="hero-copy">
+        <p class="eyebrow">Онлайн-подготовка к экзаменам по математике</p>
+        <h1>Системная подготовка к профильному ЕГЭ в мини-группах по реальному уровню ученика</h1>
+        <p class="lead">Диагностика → План → Практика → Работа над ошибками → Результат. Темп и программа подбираются после диагностики: по уровню ученика, с регулярной практикой, проверкой домашних заданий и понятной обратной связью.</p>
+        <div class="hero-actions"><a class="button primary" href="https://max.ru/u/f9LHodD0cOLQcxZyXtf7qKxi97r-w7xH1ucuv_bW4hG9NDDFqXXUuUazOgw">Записаться на диагностику</a><a class="button secondary" href="#programs">Выбрать курс</a></div>
+        <div class="metrics" aria-label="Ключевые показатели"><div><strong>500+</strong><span>учеников прошли подготовку</span></div><div><strong>20+</strong><span>лет преподавательского опыта</span></div><div><strong>3-6</strong><span>человек в мини-группе</span></div></div>
+      </div>
+      <div class="hero-visual" aria-label="Фото преподавателя">
+        <img src="assets/teacher.jpg" alt="Губарева Мария Валентиновна с учебниками по математике" />
+        <div class="proof-panel"><span>92 / 88 / 86</span><strong>сильные результаты ЕГЭ</strong><small>результат подкреплен регулярными контрольными точками</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro-strip section">
+    <div class="container strip-grid">
+      <div><span class="icon-dot">01</span><h2>Диагностика</h2><p>Определяем стартовый уровень, реальные пробелы и подходящий формат подготовки.</p></div>
+      <div><span class="icon-dot">02</span><h2>Система</h2><p>Рабочие листы, алгоритмы, домашние задания с проверкой, зачеты и пробники.</p></div>
+      <div><span class="icon-dot">03</span><h2>Результат</h2><p>Ученик видит динамику, учится распределять время и подходит к экзамену со стратегией.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="programs">
+    <div class="container section-heading">
+      <p class="eyebrow">Программы</p>
+      <h2>Курсы под конкретную учебную цель</h2>
+      <p>Выберите нужный результат: уверенная сдача ОГЭ, подготовка к профильному ЕГЭ или точечная работа над сложной темой. Полная программа каждого курса раскрывается по нажатию.</p>
+    </div>
+    <div class="container programs-carousel" data-programs-carousel aria-label="Карусель курсов">
+      <div class="programs-controls" aria-label="Управление каруселью курсов">
+        <button class="carousel-button" type="button" aria-label="Предыдущий курс" data-programs-prev><span aria-hidden="true">&larr;</span></button>
+        <span class="carousel-count" data-programs-count aria-live="polite">1 / 7</span>
+        <button class="carousel-button" type="button" aria-label="Следующий курс" data-programs-next><span aria-hidden="true">&rarr;</span></button>
+      </div>
+      <div class="programs-grid" data-programs-track tabindex="0">
+      <article class="program-card accent-primary">
+        <div class="program-top"><span>ЕГЭ</span><strong>65+</strong></div>
+        <h3>Уверенная первая часть</h3>
+        <p class="program-summary">Для одиннадцатиклассников, которым нужно восстановить базу, закрыть пробелы и научиться стабильно решать первую часть профильного ЕГЭ.</p>
+        <div class="program-facts"><span>36 недель</span><span>2 занятия по 90 минут</span><span>3-6 учеников</span></div>
+        <details class="program-details" name="course-programs">
+          <summary>Полное описание курса</summary>
+          <div class="program-details-content">
+            <h4>Кому подойдёт</h4>
+            <p>Ученикам 11 класса, которым важно восстановить знания за 8-10 классы, системно пройти программу подготовки и выйти на результат 65+ баллов.</p>
+            <h4>Что входит в курс</h4>
+            <ul class="course-features">
+              <li><strong>Входная диагностика.</strong> Определяем стартовый уровень, находим пробелы и подбираем подходящую мини-группу.</li>
+              <li><strong>Занятия в мини-группе.</strong> Два раза в неделю по 90 минут, в группе от 3 до 6 человек.</li>
+              <li><strong>Авторская система обучения.</strong> Рабочие листы, конспекты, алгоритмы решения и дополнительные материалы для отработки тем.</li>
+              <li><strong>Домашние задания с проверкой.</strong> Регулярная практика, проверка работ, исправление ошибок и обратная связь.</li>
+              <li><strong>Видеоуроки.</strong> Материалы для повторения теории и самостоятельной отработки сложных или забытых тем.</li>
+              <li><strong>Контроль знаний.</strong> Регулярные зачёты по пройденным разделам и пробные работы в формате ЕГЭ.</li>
+              <li><strong>Мини-зачёты по ключевым блокам.</strong> Проверяем усвоение материала и вовремя выявляем темы, которые нужно доработать.</li>
+              <li><strong>Регулярные пробники ЕГЭ.</strong> Отслеживаем динамику баллов, учимся распределять время и выстраиваем стратегию экзамена.</li>
+              <li><strong>Разбор результатов и ошибок.</strong> Находим слабые места, даём рекомендации и корректируем дальнейшую подготовку.</li>
+              <li><strong>Поддержка между занятиями.</strong> Ученик может задать вопрос в чате и получить помощь с домашним заданием.</li>
+            </ul>
+            <h4>Результат обучения</h4>
+            <p>При регулярном посещении занятий и выполнении рекомендаций ученик:</p>
+            <ul class="course-results">
+              <li>закрывает основные пробелы в математике за 8-10 классы;</li>
+              <li>системно проходит программу подготовки к ЕГЭ;</li>
+              <li>осваивает все типы заданий первой части профильного ЕГЭ;</li>
+              <li>учится решать самостоятельно и укладываться во время экзамена;</li>
+              <li>видит свой прогресс по зачётам и пробникам;</li>
+              <li>подходит к ЕГЭ с понятной стратегией и целью 65+ баллов.</li>
+            </ul>
+            <p class="course-price"><strong>Стоимость:</strong> 2800 ₽ за одно занятие продолжительностью 90 минут.</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="program-card accent-accent">
+        <div class="program-top"><span>ЕГЭ</span><strong>75+</strong></div>
+        <h3>Первая часть + «джентльменский набор»</h3>
+        <p class="program-summary">Для тех, кто хочет уверенно решать первую часть и освоить доступные задания второй части, необходимые для результата 75+.</p>
+        <div class="program-facts"><span>36 недель</span><span>2 занятия по 90 минут</span><span>3-6 учеников</span></div>
+        <details class="program-details" name="course-programs">
+          <summary>Полное описание курса</summary>
+          <div class="program-details-content">
+            <h4>Кому подойдёт</h4>
+            <p>Ученикам 11 класса, которым нужен результат выше возможностей одной первой части и понятная стратегия набора 75+ баллов.</p>
+            <h4>Что входит в курс</h4>
+            <ul class="course-features">
+              <li><strong>Входная диагностика.</strong> Определяем стартовый уровень, выявляем пробелы и подбираем подходящую мини-группу.</li>
+              <li><strong>Занятия в мини-группе.</strong> Два раза в неделю по 90 минут, в группе от 3 до 6 человек.</li>
+              <li><strong>Полная подготовка к первой части ЕГЭ.</strong> Последовательно разбираем все типы заданий и доводим основные алгоритмы до уверенного применения.</li>
+              <li><strong>«Джентльменский набор» второй части.</strong> Осваиваем наиболее доступные задания, которые позволяют добрать баллы.</li>
+              <li><strong>Авторская система обучения.</strong> Рабочие листы, конспекты, алгоритмы и дополнительные материалы для закрепления каждой темы.</li>
+              <li><strong>Домашние задания с проверкой.</strong> Регулярная практика, проверка работ, исправление ошибок и обратная связь.</li>
+              <li><strong>Видеоуроки.</strong> Теория для повторения и самостоятельной отработки сложных и забытых тем.</li>
+              <li><strong>Контроль знаний.</strong> Регулярные зачёты по разделам и пробные экзамены в формате ЕГЭ.</li>
+              <li><strong>Мини-зачёты по ключевым блокам.</strong> Проверяем качество усвоения и определяем темы для повторения.</li>
+              <li><strong>Регулярные пробники ЕГЭ.</strong> Отслеживаем динамику, учимся распределять время и выстраиваем стратегию выполнения работы.</li>
+              <li><strong>Разбор результатов и ошибок.</strong> Определяем слабые места и корректируем дальнейшую подготовку.</li>
+              <li><strong>Поддержка между занятиями.</strong> Отвечаем на вопросы в чате и помогаем с домашними заданиями.</li>
+            </ul>
+            <h4>Результат обучения</h4>
+            <p>При регулярной работе ученик:</p>
+            <ul class="course-results">
+              <li>закрывает основные пробелы в знаниях;</li>
+              <li>уверенно работает с заданиями первой части ЕГЭ;</li>
+              <li>осваивает «джентльменский набор» второй части;</li>
+              <li>учится выбирать задания и рационально распределять время;</li>
+              <li>отслеживает результат на зачётах и пробниках;</li>
+              <li>подходит к экзамену со стратегией выхода на 75+ баллов.</li>
+            </ul>
+            <p class="course-price"><strong>Стоимость:</strong> рассчитывается за одно занятие продолжительностью 90 минут.</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="program-card accent-second">
+        <div class="program-top"><span>ЕГЭ</span><strong>85+</strong></div>
+        <h3>Высокий результат</h3>
+        <p class="program-summary">Углублённая подготовка для учеников, готовых работать с первой частью, параметрами, планиметрией и стереометрией.</p>
+        <div class="program-facts"><span>36 недель</span><span>2 занятия по 90 минут</span><span>3-6 учеников</span></div>
+        <details class="program-details" name="course-programs">
+          <summary>Полное описание курса</summary>
+          <div class="program-details-content">
+            <h4>Кому подойдёт</h4>
+            <p>Ученикам 11 класса, нацеленным на 85+ баллов и готовым системно работать со сложными заданиями второй части профильного ЕГЭ.</p>
+            <h4>Что входит в курс</h4>
+            <ul class="course-features">
+              <li><strong>Входная диагностика.</strong> Определяем стартовый уровень, выявляем пробелы и подбираем мини-группу.</li>
+              <li><strong>Занятия в мини-группе.</strong> Два раза в неделю по 90 минут, в группе от 3 до 6 человек.</li>
+              <li><strong>Уверенная первая часть ЕГЭ.</strong> Систематизируем темы, закрываем пробелы и работаем над точностью и скоростью.</li>
+              <li><strong>«Джентльменский набор» второй части.</strong> Разбираем задания для уверенного набора дополнительных первичных баллов.</li>
+              <li><strong>Задачи с параметрами.</strong> Анализируем условие, рассматриваем случаи и строим полноценное решение.</li>
+              <li><strong>Планиметрия.</strong> Повторяем теорию, разбираем методы решения сложных геометрических задач и учимся оформлению.</li>
+              <li><strong>Стереометрия.</strong> Строим математическую модель, находим необходимые элементы и оформляем решение второй части.</li>
+              <li><strong>Авторская система обучения.</strong> Рабочие листы, конспекты, алгоритмы, подборки задач и дополнительные материалы.</li>
+              <li><strong>Домашние задания с проверкой.</strong> Регулярная практика, подробная проверка, исправление ошибок и обратная связь.</li>
+              <li><strong>Видеоуроки.</strong> Теория для повторения и самостоятельной отработки отдельных тем.</li>
+              <li><strong>Контроль знаний и мини-зачёты.</strong> Проверяем ключевые блоки и вовремя находим темы для доработки.</li>
+              <li><strong>Полноценные пробные экзамены.</strong> Отслеживаем динамику и тренируем стратегию выполнения работы.</li>
+              <li><strong>Разбор результатов и ошибок.</strong> Определяем слабые места и корректируем индивидуальную подготовку.</li>
+              <li><strong>Поддержка между занятиями.</strong> Отвечаем на вопросы в чате и помогаем с домашними заданиями.</li>
+            </ul>
+            <h4>Результат обучения</h4>
+            <p>При регулярной работе ученик:</p>
+            <ul class="course-results">
+              <li>уверенно решает первую часть ЕГЭ;</li>
+              <li>осваивает «джентльменский набор» второй части;</li>
+              <li>умеет работать с задачами с параметрами;</li>
+              <li>развивает навыки решения планиметрических и стереометрических задач;</li>
+              <li>грамотно оформляет развёрнутые решения;</li>
+              <li>регулярно проверяет уровень на зачётах и пробниках;</li>
+              <li>формирует стратегию экзамена с ориентиром на 85+ баллов.</li>
+            </ul>
+            <p class="course-price"><strong>Стоимость:</strong> рассчитывается за одно занятие продолжительностью 90 минут.</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="program-card accent-gold">
+        <div class="program-top"><span>ОГЭ</span><strong>5</strong></div>
+        <h3>Подготовка к высокому результату</h3>
+        <p class="program-summary">Полная подготовка по алгебре и геометрии для девятиклассников, которые хотят уверенно сдать ОГЭ на оценку «5».</p>
+        <div class="program-facts"><span>9 класс</span><span>2 занятия по 75 минут</span><span>Мини-группа</span></div>
+        <details class="program-details" name="course-programs">
+          <summary>Полное описание курса</summary>
+          <div class="program-details-content">
+            <h4>Кому подойдёт</h4>
+            <p>Ученикам 9 класса, которые хотят уверенно сдать ОГЭ и освоить задания повышенной сложности, необходимые для оценки «5».</p>
+            <h4>Что входит в курс</h4>
+            <ul class="course-features">
+              <li><strong>Входная диагностика.</strong> Определяем реальный уровень, выявляем пробелы по алгебре и геометрии и подбираем группу.</li>
+              <li><strong>Занятия в мини-группе.</strong> Два раза в неделю по 75 минут с вниманием к работе каждого ученика.</li>
+              <li><strong>Системная подготовка ко всему ОГЭ.</strong> Разбираем задания от базовых номеров первой части до повышенной сложности.</li>
+              <li><strong>Алгебра и геометрия.</strong> Повторяем теорию, учимся видеть ход решения и регулярно отрабатываем оба раздела.</li>
+              <li><strong>Авторские материалы.</strong> Рабочие листы, конспекты, алгоритмы, тематические подборки и дополнительные задания.</li>
+              <li><strong>Домашние задания с проверкой.</strong> Практика между занятиями, проверка работ, исправление ошибок и обратная связь.</li>
+              <li><strong>Видеоуроки.</strong> Материалы для повторения теории и самостоятельной работы над сложными темами.</li>
+              <li><strong>Регулярные пробники ОГЭ.</strong> Пишем полноценные работы, отслеживаем динамику и учимся распределять время.</li>
+              <li><strong>Разбор ошибок.</strong> После зачётов и пробников определяем темы, которые необходимо усилить.</li>
+              <li><strong>Поддержка между занятиями.</strong> Ученик может задать вопрос в чате и получить помощь с домашней работой.</li>
+            </ul>
+            <h4>Результат обучения</h4>
+            <p>При регулярной работе ученик:</p>
+            <ul class="course-results">
+              <li>закрывает основные пробелы и системно осваивает программу ОГЭ;</li>
+              <li>уверенно решает первую часть экзамена;</li>
+              <li>осваивает задания повышенной сложности для оценки «5»;</li>
+              <li>укрепляет алгебру и геометрию;</li>
+              <li>учится самостоятельно находить и исправлять ошибки;</li>
+              <li>видит прогресс по мини-зачётам и пробникам;</li>
+              <li>подходит к экзамену со стратегией и ориентиром на оценку «5».</li>
+            </ul>
+            <p class="course-price"><strong>Формат:</strong> мини-группа, два раза в неделю по 75 минут.</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="program-card accent-primary">
+        <div class="program-top"><span>ОГЭ</span><strong>4</strong></div>
+        <h3>Уверенная сдача экзамена</h3>
+        <p class="program-summary">Системная подготовка для девятиклассников, которым нужно закрыть пробелы, укрепить базу и стабильно выйти на оценку «4».</p>
+        <div class="program-facts"><span>9 класс</span><span>2 занятия по 75 минут</span><span>Мини-группа</span></div>
+        <details class="program-details" name="course-programs">
+          <summary>Полное описание курса</summary>
+          <div class="program-details-content">
+            <h4>Кому подойдёт</h4>
+            <p>Ученикам 9 класса, которым важно восполнить основные пробелы, укрепить математическую базу и уверенно сдать ОГЭ на оценку «4».</p>
+            <h4>Что входит в курс</h4>
+            <ul class="course-features">
+              <li><strong>Входная диагностика.</strong> Определяем уровень, выявляем пробелы по алгебре и геометрии и подбираем группу.</li>
+              <li><strong>Занятия в мини-группе.</strong> Два раза в неделю по 75 минут с учётом стартового уровня учеников.</li>
+              <li><strong>Системная подготовка к ОГЭ.</strong> Последовательно разбираем основные типы заданий и формируем прочную базу.</li>
+              <li><strong>Алгебра и геометрия.</strong> Повторяем формулы и правила, разбираем алгоритмы и регулярно практикуемся.</li>
+              <li><strong>Авторские материалы.</strong> Рабочие листы, конспекты, алгоритмы, тематические подборки и дополнительные задания.</li>
+              <li><strong>Домашние задания с проверкой.</strong> Практика между занятиями, проверка работ, исправление ошибок и обратная связь.</li>
+              <li><strong>Видеоуроки.</strong> Теория для повторения сложных или забытых тем.</li>
+              <li><strong>Мини-зачёты.</strong> После ключевых блоков проверяем усвоение и определяем темы для повторения.</li>
+              <li><strong>Регулярные пробники ОГЭ.</strong> Отслеживаем динамику и постепенно учимся укладываться в отведённое время.</li>
+              <li><strong>Разбор ошибок.</strong> Анализируем результаты, находим слабые места и корректируем подготовку.</li>
+              <li><strong>Поддержка между занятиями.</strong> Ученик может задать вопрос в чате и получить помощь с домашним заданием.</li>
+            </ul>
+            <h4>Результат обучения</h4>
+            <p>При регулярной работе ученик:</p>
+            <ul class="course-results">
+              <li>восполняет основные пробелы и укрепляет математическую базу;</li>
+              <li>осваивает основные задания ОГЭ по алгебре и геометрии;</li>
+              <li>учится решать самостоятельно, а не только по образцу;</li>
+              <li>уменьшает количество ошибок в экзаменационной работе;</li>
+              <li>отслеживает прогресс по мини-зачётам и пробникам;</li>
+              <li>подходит к экзамену со стратегией и ориентиром на стабильную оценку «4».</li>
+            </ul>
+            <p class="course-price"><strong>Формат:</strong> мини-группа, два раза в неделю по 75 минут.</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="program-card accent-accent">
+        <div class="program-top"><span>Мини-курс</span><strong>12</strong></div>
+        <h3>Тригонометрия с нуля</h3>
+        <p class="program-summary">От единичной окружности и основных формул до преобразования выражений и решения тригонометрических уравнений ЕГЭ.</p>
+        <div class="program-facts"><span>6 онлайн-встреч</span><span>6 встреч в чате</span><span>Теория в записи</span></div>
+        <details class="program-details" name="course-programs">
+          <summary>Полное описание курса</summary>
+          <div class="program-details-content">
+            <h4>Кому подойдёт</h4>
+            <p>Ученикам, которые путаются в тригонометрии или хотят системно разобраться в теме с самых основ.</p>
+            <h4>Формат курса</h4>
+            <p>Шесть онлайн-встреч, шесть встреч в мессенджере с сопровождением и проверкой заданий, а также теория в записи.</p>
+            <h4>Что входит в курс</h4>
+            <ul class="course-features">
+              <li><strong>6 онлайн-занятий по 60 минут.</strong> Разбираем теорию, алгоритмы и сложные задания вместе с преподавателем.</li>
+              <li><strong>6 встреч в мессенджере по 60 минут.</strong> Самостоятельная практика с проверкой, обратной связью и разбором ошибок.</li>
+              <li><strong>Теория в записи.</strong> Короткие видеоуроки можно пересматривать и возвращаться к сложным моментам.</li>
+              <li><strong>12 тематических работ.</strong> Единичная окружность, основные формулы, формулы приведения и двойного угла, простейшие уравнения, уравнения уровня ЕГЭ, ОДЗ, уравнения с логарифмами и преобразование выражений.</li>
+              <li><strong>Авторские рабочие материалы.</strong> Рабочая тетрадь, задания для практики, образцы решений и ключи.</li>
+              <li><strong>Проверка и разбор ошибок.</strong> Ученик получает обратную связь и исправляет ошибки, а не просто сверяется с ответами.</li>
+            </ul>
+            <h4>Результат обучения</h4>
+            <p>Ученик систематизирует тригонометрию с самых основ, понимает и применяет основные формулы, уверенно работает с единичной окружностью, преобразует выражения и решает основные типы тригонометрических уравнений ЕГЭ. Тригонометрия становится понятной системой, а не набором формул для запоминания.</p>
+            <p class="course-price"><strong>Стоимость всего курса:</strong> 7900 ₽.</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="program-card accent-second">
+        <div class="program-top"><span>Мини-курс</span><strong>9 ч</strong></div>
+        <h3>Показательные уравнения и неравенства с нуля</h3>
+        <p class="program-summary">База, основные методы решения и практика для самостоятельной работы с показательными заданиями профильного ЕГЭ.</p>
+        <div class="program-facts"><span>6 занятий по 90 минут</span><span>6 встреч в чате</span><span>Теория в записи</span></div>
+        <details class="program-details" name="course-programs">
+          <summary>Полное описание курса</summary>
+          <div class="program-details-content">
+            <h4>Кому подойдёт</h4>
+            <p>Ученикам, которым нужно разобраться в показательных уравнениях и неравенствах с самых основ и научиться самостоятельно решать задания профильного ЕГЭ.</p>
+            <h4>Объём курса</h4>
+            <p>Шесть онлайн-встреч по 90 минут — девять часов занятий, шесть встреч по домашней работе в мессенджере и теория в записи для самостоятельного изучения и повторения.</p>
+            <h4>Что входит в курс</h4>
+            <ul class="course-features">
+              <li><strong>Необходимая база.</strong> Повторяем свойства степеней и показательной функции, необходимые для решения заданий.</li>
+              <li><strong>Показательные уравнения.</strong> Приведение к одному основанию, замена переменной, разложение на множители и другие типовые приёмы.</li>
+              <li><strong>Показательные неравенства.</strong> Работаем со свойствами показательной функции, определяем знак неравенства и решаем задания уровня ЕГЭ.</li>
+              <li><strong>Авторские материалы.</strong> Рабочие листы, конспекты, алгоритмы, образцы решений и тематические подборки.</li>
+              <li><strong>Домашняя практика с проверкой.</strong> Ученик получает обратную связь, исправляет ошибки и закрепляет материал.</li>
+              <li><strong>Сопровождение в мессенджере.</strong> Разбираем домашнюю работу и сложные задания, отвечаем на вопросы.</li>
+            </ul>
+            <h4>Результат обучения</h4>
+            <p>Ученик:</p>
+            <ul class="course-results">
+              <li>понимает свойства степеней и показательной функции;</li>
+              <li>решает основные типы показательных уравнений;</li>
+              <li>умеет работать с показательными неравенствами;</li>
+              <li>выбирает подходящий способ решения, а не действует только по образцу;</li>
+              <li>получает базу для дальнейшей работы с заданиями профильного ЕГЭ.</li>
+            </ul>
+            <p class="course-price"><strong>Итог:</strong> 9 часов онлайн-занятий, 6 встреч с обратной связью в мессенджере и теория в записи.</p>
+          </div>
+        </details>
+      </article>
+      </div>
+      <div class="carousel-dots" data-programs-dots aria-label="Выбор курса"></div>
+    </div>
+  </section>
+
+  <section class="section lesson-materials section-band" id="materials">
+    <div class="container materials-layout">
+      <div class="section-heading left">
+        <p class="eyebrow">Материалы урока</p>
+        <h2>Примеры материалов, которые получают ученики</h2>
+      </div>
+      <div class="materials-carousel" data-materials-carousel aria-label="Карусель материалов урока">
+        <div class="materials-controls" aria-label="Управление каруселью материалов">
+          <button class="carousel-button" type="button" aria-label="Предыдущий материал" data-materials-prev><span aria-hidden="true">&larr;</span></button>
+          <span class="carousel-count" data-materials-count aria-live="polite">1 / 8</span>
+          <button class="carousel-button" type="button" aria-label="Следующий материал" data-materials-next><span aria-hidden="true">&rarr;</span></button>
+        </div>
+        <div class="materials-track" data-materials-track tabindex="0">
+          <a class="material-slide" href="assets/materials/material-01.jpg" target="_blank" rel="noopener" aria-label="Открыть пошаговый разбор задания по тригонометрии">
+            <img src="assets/materials/material-01.jpg" alt="Пошаговый разбор задания по тригонометрии" loading="lazy" decoding="async" />
+          </a>
+          <a class="material-slide" href="assets/materials/material-02.jpg" target="_blank" rel="noopener" aria-label="Открыть разбор задания по тригонометрии">
+            <img src="assets/materials/material-02.jpg" alt="Разбор задания по тригонометрии с похожими задачами" loading="lazy" decoding="async" />
+          </a>
+          <a class="material-slide" href="assets/materials/material-03.jpg" target="_blank" rel="noopener" aria-label="Открыть рабочий лист по тригонометрии">
+            <img src="assets/materials/material-03.jpg" alt="Рабочий лист по тригонометрии, вариант 2" loading="lazy" decoding="async" />
+          </a>
+          <a class="material-slide" href="assets/materials/material-04.jpg" target="_blank" rel="noopener" aria-label="Открыть подборку заданий по тригонометрии">
+            <img src="assets/materials/material-04.jpg" alt="Подборка из 25 заданий по тригонометрии" loading="lazy" decoding="async" />
+          </a>
+          <a class="material-slide" href="assets/materials/material-05.jpg" target="_blank" rel="noopener" aria-label="Открыть памятку по свойствам логарифмов">
+            <img src="assets/materials/material-05.jpg" alt="Памятка с основными свойствами логарифмов" loading="lazy" decoding="async" />
+          </a>
+          <a class="material-slide" href="assets/materials/material-06.jpg" target="_blank" rel="noopener" aria-label="Открыть памятку по свойствам корней">
+            <img src="assets/materials/material-06.jpg" alt="Памятка со свойствами корня n-й степени" loading="lazy" decoding="async" />
+          </a>
+          <a class="material-slide" href="assets/materials/material-07.jpg" target="_blank" rel="noopener" aria-label="Открыть рукописный разбор уравнений">
+            <img src="assets/materials/material-07.jpg" alt="Рукописный пошаговый разбор показательных уравнений" loading="lazy" decoding="async" />
+          </a>
+          <a class="material-slide" href="assets/materials/material-08.jpg" target="_blank" rel="noopener" aria-label="Открыть рабочий лист для урока">
+            <img src="assets/materials/material-08.jpg" alt="Рабочий лист по тригонометрии для работы на уроке" loading="lazy" decoding="async" />
+          </a>
+        </div>
+        <div class="carousel-dots" data-materials-dots aria-label="Выбор материала"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-band" id="results">
+    <div class="container results-layout">
+      <div class="section-heading left"><p class="eyebrow">Доказательства</p><h2>Результаты, которые можно отследить</h2><p>Подготовка строится вокруг конкретной цели: диагностика, план, регулярные контрольные точки и работа над ошибками после каждого зачета или пробника.</p></div>
+      <div class="scoreboard"><div class="score-row"><span>Профильный ЕГЭ</span><strong>92, 88, 86, 85, 82, 80</strong></div><div class="score-row"><span>ОГЭ</span><strong>4 и 5</strong></div><div class="score-row"><span>Формат</span><strong>онлайн, мини-группы и индивидуально</strong></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="about-photo"><img src="assets/teacher2.png" alt="Мария Валентиновна, репетитор по математике" /></div>
+      <div class="about-copy"><p class="eyebrow">О преподавателе</p><h2>Объясняю до понимания, а не до конца занятия</h2><p>Я окончила Тольяттинский государственный университет по специальности "Математика" в 2002 году. Работала учителем математики в школах с углубленным изучением предметов N10 г. Тольятти и в школе N18.</p><p>Сегодня провожу индивидуальные занятия и мини-группы онлайн, помогаю школьникам из разных городов готовиться к ЕГЭ и ОГЭ, устранять пробелы и развивать уверенность.</p><div class="about-badges"><span>20+ лет опыта</span><span>7-11 классы</span><span>профильная математика</span></div></div>
+    </div>
+  </section>
+
+  <section class="section education-section section-band" id="education">
+    <div class="container education-layout">
+      <div class="section-heading left">
+        <p class="eyebrow">Моё образование</p>
+        <h2>Дипломы и повышение квалификации</h2>
+        <p>Профильное математическое образование и регулярное повышение квалификации по подготовке к государственной итоговой аттестации.</p>
+      </div>
+      <div class="education-carousel" data-education-carousel aria-label="Карусель дипломов и удостоверений">
+        <div class="education-controls" aria-label="Управление каруселью">
+          <button class="carousel-button" type="button" aria-label="Предыдущий диплом" data-carousel-prev><span aria-hidden="true">←</span></button>
+          <span class="carousel-count" data-carousel-count>1 / 8</span>
+          <button class="carousel-button" type="button" aria-label="Следующий диплом" data-carousel-next><span aria-hidden="true">→</span></button>
+        </div>
+        <div class="education-track" data-carousel-track tabindex="0">
+          <figure class="education-slide"><img src="assets/education/diploma-1.jpg" alt="Диплом Тольяттинского государственного университета, специальность Математика" /><figcaption>Диплом о высшем образовании</figcaption></figure>
+          <figure class="education-slide"><img src="assets/education/diploma-2.jpg" alt="Удостоверение о повышении квалификации экспертов ЕГЭ по математике, 2022 год" /><figcaption>Повышение квалификации, ЕГЭ по математике</figcaption></figure>
+          <figure class="education-slide"><img src="assets/education/diploma-3.jpg" alt="Удостоверение о повышении квалификации экспертов ЕГЭ по математике, 2022 год, копия" /><figcaption>Подготовка экспертов ЕГЭ</figcaption></figure>
+          <figure class="education-slide"><img src="assets/education/diploma-4.jpg" alt="Удостоверение о повышении квалификации по методике решения задач ЕГЭ по математике, 2019 год" /><figcaption>Методика решения задач ЕГЭ</figcaption></figure>
+          <figure class="education-slide"><img src="assets/education/diploma-5.jpg" alt="Удостоверение основного эксперта по математике, 2019 год" /><figcaption>Статус эксперта по математике</figcaption></figure>
+          <figure class="education-slide"><img src="assets/education/diploma-6.jpg" alt="Удостоверение о повышении квалификации по проектированию рабочей программы учебного курса, 2020 год" /><figcaption>Проектирование учебного курса</figcaption></figure>
+          <figure class="education-slide"><img src="assets/education/diploma-7.jpg" alt="Удостоверение по программе регионального центра трудовых ресурсов, 2018 год" /><figcaption>Региональный центр трудовых ресурсов</figcaption></figure>
+          <figure class="education-slide"><img src="assets/education/diploma-8.jpg" alt="Удостоверение по обеспечению стратегии реализации национального проекта Развитие образования, 2018 год" /><figcaption>Развитие образования</figcaption></figure>
+        </div>
+        <div class="carousel-dots" data-carousel-dots aria-label="Выбор диплома"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="cases">
+    <div class="container section-heading"><p class="eyebrow">Кейсы и отзывы</p><h2>Истории учеников</h2><p>Реальные кейсы и отзывы сохранены изображениями, на телефоне блок листается горизонтально.</p></div>
+    <div class="container cases-grid">
+      <figure><img src="assets/case-yaroslav.png" alt="Кейс ученика Ярослав: с 56 до 80 баллов" /></figure>
+      <figure><img src="assets/case-dasha.png" alt="Кейс ученицы Даша: 90 баллов по профильной математике" /></figure>
+      <figure><img src="assets/case-zhenya.png" alt="Кейс ученика Женя: 70 баллов и поступление на бюджет" /></figure>
+      <figure><img src="assets/case-daniil.png" alt="Кейс ученика Даниил: 76 баллов и поступление на бюджет" /></figure>
+    </div>
+  </section>
+
+  <section class="section reviews-section section-band" id="reviews">
+    <div class="container section-heading">
+      <p class="eyebrow">Отзывы учеников и родителей</p>
+      <h2>Что говорят о подготовке</h2>
+      <p>Обратная связь о занятиях, поддержке, понятных объяснениях и результатах на экзаменах.</p>
+    </div>
+    <div class="container reviews-carousel" data-reviews-carousel aria-label="Отзывы учеников и родителей">
+      <div class="reviews-controls" aria-label="Управление отзывами">
+        <button class="carousel-button" type="button" aria-label="Предыдущий отзыв" data-reviews-prev><span aria-hidden="true">&larr;</span></button>
+        <span class="carousel-count" data-reviews-count aria-live="polite">1 / 21</span>
+        <button class="carousel-button" type="button" aria-label="Следующий отзыв" data-reviews-next><span aria-hidden="true">&rarr;</span></button>
+      </div>
+      <div class="reviews-track" data-reviews-track tabindex="0">
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 1"><img src="assets/reviews/review-01.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 1" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 2"><img src="assets/reviews/review-02.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 2" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 3"><img src="assets/reviews/review-03.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 3" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 4"><img src="assets/reviews/review-04.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 4" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 5"><img src="assets/reviews/review-05.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 5" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 6"><img src="assets/reviews/review-06.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 6" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 7"><img src="assets/reviews/review-07.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 7" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 8"><img src="assets/reviews/review-08.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 8" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 9"><img src="assets/reviews/review-09.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 9" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 10"><img src="assets/reviews/review-10.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 10" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 11"><img src="assets/reviews/review-11.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 11" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 12"><img src="assets/reviews/review-12.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 12" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 13"><img src="assets/reviews/review-13.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 13" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 14"><img src="assets/reviews/review-14.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 14" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 15"><img src="assets/reviews/review-15.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 15" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 16"><img src="assets/reviews/review-16.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 16" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 17"><img src="assets/reviews/review-17.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 17" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 18"><img src="assets/reviews/review-18.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 18" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 19"><img src="assets/reviews/review-19.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 19" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 20"><img src="assets/reviews/review-20.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 20" /></button></figure>
+          <figure class="review-slide"><button class="review-zoom" type="button" aria-label="Увеличить отзыв 21"><img src="assets/reviews/review-21.png" loading="lazy" decoding="async" alt="Отзыв ученика или родителя о подготовке с Марией Губаревой, 21" /></button></figure>
+      </div>
+    </div>
+    <dialog class="review-dialog" data-review-dialog aria-label="Увеличенный отзыв">
+      <button class="review-dialog-close" type="button" aria-label="Закрыть отзыв" title="Закрыть" data-review-dialog-close>&times;</button>
+      <img data-review-dialog-image alt="" />
+    </dialog>
+  </section>
+
+  <section class="section individual-section" id="individual">
+    <div class="container individual-offer">
+      <div class="individual-copy">
+        <p class="eyebrow">Индивидуальный формат</p>
+        <h2>Индивидуальное занятие</h2>
+        <p>Персональная работа по текущему уровню: разбор сложных тем, устранение пробелов и практика с обратной связью.</p>
+      </div>
+      <div class="individual-price">
+        <span>Стоимость занятия</span>
+        <strong>4 500 ₽</strong>
+        <a class="button primary wide" href="https://max.ru/u/f9LHodD0cOLQcxZyXtf7qKxi97r-w7xH1ucuv_bW4hG9NDDFqXXUuUazOgw">Записаться</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contacts section-band" id="contacts">
+    <div class="container contacts-grid">
+      <div><p class="eyebrow">Связь</p><h2>Запишитесь на диагностику</h2><p>Консультации: вторник и четверг, 10:00-16:00 мск. Удобнее писать в Max или ВКонтакте.</p></div>
+      <div class="contact-card"><a class="contact-link" href="tel:+79053060024">+7 905 306-00-24</a><a class="contact-link" href="https://max.ru/u/f9LHodD0cOLQcxZyXtf7qKxi97r-w7xH1ucuv_bW4hG9NDDFqXXUuUazOgw">Max</a><a class="contact-link" href="https://vk.com/mvg_repetitormathematic">ВКонтакте</a><a class="button primary wide" href="https://max.ru/u/f9LHodD0cOLQcxZyXtf7qKxi97r-w7xH1ucuv_bW4hG9NDDFqXXUuUazOgw">Написать преподавателю</a></div>
+    </div>
+  </section>
     </main>
+    <footer class="footer"><div class="container"><span>Вариант 1: Lavender Study</span><span>Спокойная системная подача</span></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="gsap-animations.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
