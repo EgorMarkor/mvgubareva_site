@@ -382,20 +382,20 @@ h3 { font-size: 21px; line-height: 1.22; }
 .review-zoom {
   display: block;
   width: 100%;
+  aspect-ratio: 577 / 1140;
+  overflow: hidden;
   padding: 0;
-  border: 0;
+  border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: transparent;
+  background: white;
+  box-shadow: 0 18px 45px var(--shadow-color);
   cursor: zoom-in;
 }
 .review-zoom img {
   width: 100%;
-  aspect-ratio: 577 / 1280;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: white;
-  object-fit: contain;
-  box-shadow: 0 18px 45px var(--shadow-color);
+  height: 100%;
+  object-fit: cover;
+  object-position: center 46%;
 }
 .review-zoom:focus-visible {
   outline: 3px solid color-mix(in srgb, var(--accent) 30%, transparent);
