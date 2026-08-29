@@ -1,16 +1,16 @@
 :root {
-  --bg: #f8eee9;
-  --panel: #fffdfb;
-  --panel-alt: #f1e2e4;
-  --ink: #402925;
-  --muted: #6f555b;
-  --primary: #8e7082;
-  --primary-deep: #5d4253;
-  --accent: #9e5d46;
-  --second: #7b6175;
-  --gold: #a47a5e;
-  --line: rgba(96, 68, 82, 0.17);
-  --shadow-color: rgba(64, 41, 37, 0.12);
+  --bg: #fbf8ff;
+  --panel: #fffefe;
+  --panel-alt: #efe7fb;
+  --ink: #171236;
+  --muted: #615a7d;
+  --primary: #8f68cc;
+  --primary-deep: #4f367f;
+  --accent: #7655c7;
+  --second: #a984dc;
+  --gold: #c5addf;
+  --line: rgba(92, 69, 132, 0.18);
+  --shadow-color: rgba(46, 35, 82, 0.13);
   --radius: 8px;
   --heading: 'Bitter', Georgia, serif;
   --body: 'Bitter', Georgia, serif;
